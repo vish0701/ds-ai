@@ -37,7 +37,7 @@ The business objectives and goals of data analysis are pretty straightforward.
         Sector analysis: Understanding the distribution of investments across the eight main sectors. (Note that we are interested in the eight 'main sectors' provided in the mapping file. The two files — companies and rounds2 — have numerous sub-sector names; hence, you will need to map each sub-sector to its main sector.)
 
 
-4. Data Description can be found in the [Data-Description.xlsx](upgrad/inv-anal-assign/Data-Description.xlsx) spreadsheet
+4. Data Description can be found in the [Data-Description.xlsx](https://github.com/vish0701/datasci/blob/master/upgrad/inv-anal-assign/Data-Description.xlsx) spreadsheet
 
     a. companies
 
