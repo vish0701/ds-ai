@@ -1,0 +1,128 @@
+%YAML 1.1
+---
+actions:
+- action_check_location
+- action_restaurant
+- email_restaurant_details
+- utter_ask_cuisine
+- utter_ask_howcanhelp
+- utter_ask_location
+- utter_ask_mail
+- utter_ask_price
+- utter_ask_whethermail
+- utter_bye_final
+- utter_bye_noop
+- utter_bye_notfound
+- utter_default
+- utter_email_confirmation
+- utter_foodie_not_working
+- utter_goodbye
+- utter_greet
+- utter_location_notfound
+- utter_rest_notfound
+- utter_search_msg
+- utter_try_again
+config:
+  store_entities_as_slots: true
+entities:
+- location
+- cuisine
+- email
+- price
+forms: []
+intents:
+- greet:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- restaurant_search:
+    use_entities: true
+slots:
+  cuisine:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - chinese
+    - italian
+    - north indian
+    - south indian
+    - american
+    - mexican
+  email:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location_found:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - notfound
+    - tier3
+    - found
+  price:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.CategoricalSlot
+    values:
+    - less than 300
+    - between 300 and 700
+    - more than 700
+  rest_found:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_cuisine:
+  - text: "What kind of cuisine would you like to have \n 1. Chinese \n 2. Italian\
+      \ \n 3. South Indian \n 4. North Indian \n 5. Mexican \n 6. American"
+  utter_ask_howcanhelp:
+  - text: How can I help you?
+  utter_ask_location:
+  - text: In what location?
+  - text: In which city would you like to search?
+  utter_ask_mail:
+  - text: To what email address should I send the restaurant details?
+  - text: Could you please share the recipient email address?
+  utter_ask_price:
+  - text: "What's the average budget for two people \n1. Less than 300 \n2. between\
+      \ 300 and 700\n3. More than 700"
+  utter_bye_final:
+  - text: Okay! Bon Appetit!
+  - text: Glad I could help you. Have a nice day!
+  utter_bye_noop:
+  - text: Bye! See you later.
+  - text: See you again soon.
+  - text: Bye :( Hope to you see you soon.
+  - text: Bye. Happy to help you in future soon.
+  utter_bye_notfound:
+  - text: Sorry! It's not working out! Try again later.
+  utter_default:
+  - text: I am sorry I did not understand that. Could you please rephrase?
+  utter_email_confirmation:
+  - text: Details of the top 5 restaurants have been emailed.
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: Hey there! How may i help you.
+  - text: Hi, How can I help you!
+  - text: Hey, How is it going. How May I help you Today.
+  utter_location_notfound:
+  - text: Sorry, Foodie currently does not operate at this location. Can you please
+      suggest some other location?
+  utter_search_msg:
+  - text: "Looking for restaurants ... thanks for your patience.\n"
+  utter_try_again:
+  - text: Please try a different price range.
