@@ -36,3 +36,8 @@ The business objectives and goals of data analysis are pretty straightforward.
         Country analysis: Identifying the countries which have been the most heavily invested in the past. These will be Spark Funds’ favourites as well.
         Sector analysis: Understanding the distribution of investments across the eight main sectors. (Note that we are interested in the eight 'main sectors' provided in the mapping file. The two files — companies and rounds2 — have numerous sub-sector names; hence, you will need to map each sub-sector to its main sector.)
 
+
+4. Data Description can be found in the [Data-Description.xlsx](upgrad/inv-anal-assign/Data-Description.xlsx) spreadsheet
+
+    a. companies
+
