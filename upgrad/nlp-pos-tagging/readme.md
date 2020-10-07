@@ -16,7 +16,7 @@ For this assignment, I used the Treebank dataset of NLTK with the 'universal' ta
 **Goals**
 The Treebank dataset into train and validation sets with **a sample size of 95:5** for training: validation sets, to keep the algorithm runtime low.
 
-The followined needed to be accomplished in this assignment:
+The following needed to be accomplished in this assignment:
 * Write the vanilla Viterbi algorithm for assigning POS tags (i.e. without dealing with unknown words) 
 * Solve the problem of unknown words using at least two techniques. These techniques can use any of the approaches discussed in the class - lexicon, rule-based, probabilistic etc. Note that to implement these techniques, you can either write separate functions and call them from the main Viterbi algorithm, or modify the Viterbi algorithm, or both.
 * Compare the tagging accuracy after making these modifications with the vanilla Viterbi algorithm.
