@@ -16,7 +16,7 @@ The assignment is divided into the following sections:
     Model training and predictions
 
 
-**Data Preparation**
+### Data Preparation
 
 No new code was written for this part.
 
@@ -32,7 +32,7 @@ train_set_y shape: (10, 50000)
 test_set_x shape: (784, 10000)
 test_set_y shape: (10, 10000)
 
-**Feedforward**
+### Feedforward 
 
 There are functions assigned to different subparts of feedforward. 
 
@@ -41,7 +41,7 @@ There are functions assigned to different subparts of feedforward.
     * The output of the last layer is denoted as HL instead of P where layer L is the final output layer. Hence, there are L−1 hidden layers.
     * For each layer l, the Zl is stored as 'activation_memory' and Hl−1, Wl, bl are stored as 'linear_memory' to use later in backpropagation
 
-Summarization of the feedforward algorithm as above:
+Summarization of the **feedforward** algorithm as above:
 
     H0=B
     for l in [1,2,.......,L−1]:
@@ -49,7 +49,7 @@ Summarization of the feedforward algorithm as above:
         Hl=σ(Zl)
     HL = softmax(WL.HL−1+bL)
 
-Summarization of all the functions defined in feedforward:
+Summarization of all the functions defined in **feedforward**:
 | Function | Arguments | Returns | Explanation |
 |----------|-----------|---------|-------------|
 | sigmoid | Z | H, sigmoid_memory | Applies sigmoid activation on Z to calculate H. Returns H, sigmoid_memory = Z  (Step 2.2) |
@@ -60,7 +60,7 @@ Summarization of all the functions defined in feedforward:
 | L_layer_forward | X, parameters | HL, memories | Uses parameters initialized by initialize_parameters and performs feedforward using layer_forward in a 'for loop' for all layers. Appends memory for each layer to memories. layer_forward for the last layer is performed outside the loop since the activation function for all layers is relu except for the last layer (which is softmax). Returns the network output HL and memories (Steps 1 to 3) |
 
 
-**Loss Calculation**
+### Loss Calculation
 
 The loss used for multiclass classification is the cross-entropy loss.
 | Function | Arguments | Returns | Explanation |
@@ -68,25 +68,30 @@ The loss used for multiclass classification is the cross-entropy loss.
 | compute_loss	| HL, Y	| loss	| It returns loss as the average of the loss of all data points. HL and Y are matrices. Hence, *loss  = 
 -1.*average of the sum of all the elements of the matrix Ylog(HL) multiplied element-wise.* |
 
-**Backpropagation**
+### Backpropagation
 
 To summarise, the important points to keep in mind are:
     * The parameters dictionary is getting updated in place at each step.
     * The memories from **L_layer_forward** consisting of the tuple memory = (linear_memory, activation_memory) for each layer is used in backpropagation
     The backpropagation process will run in a loop from the last layer to the first, and each loop will compute the gradients for **Z,H,W,b**.
 
-The backpropagation algorithm pseudocode is as follows:
+The **backpropagation** algorithm pseudocode is as follows:
 
 ![Backpropagtion Algo](Backprop_Algo.png)
 
 
-Summarization of all functions defined in backpropagation:
+Summarization of all functions defined in **backpropagation**:
 | Function | Arguments | Returns | Explanation |
 |----------|-----------|---------|-------------|
 | sigmoid_backward |dH, sigmoid_memory | dZ | Z = sigmoid_memory (stored during feedforward); uses this Z and dH to calculate the gradient dZ (Step 5.1) |
 | relu_backward	| dH, relu_memory| dZ | Z = relu_memory (stored during feedforward); uses this Z and dH to calculate the gradient dZ (Step 5.1) |
 | layer_backward | dH, memory, activation| dH_prev, dW, db| Performs Steps 5.1 to 5.4. Calculates dZ using activation_backward and then uses dZ to calculate dH_prev, dW, db using equations in steps 5.2 to 5.4. |
 | L_layer_backward | HL, Y, memories | gradients | Uses **layer_backward** in a 'for loop' using relu activation to get gradients  *dH_prev, dW, db* stored in a dictionary gradients. Note that the backprop for the last laye (Steps 1 to 4) is calculated outside and before the for loop. Returns gradients which has *dH, dW, db* for all the layers. |
+
+
+### Assignment Flow
+![](assignment_flow.png)
+
 
 
 
