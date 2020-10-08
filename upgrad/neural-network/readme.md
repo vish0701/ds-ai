@@ -54,3 +54,4 @@ Summarization of all the functions defined in feedforward:
 |----------|-----------|---------|-------------|
 | sigmoid | Z | H, sigmoid_memory | Applies sigmoid activation on Z to calculate H. Returns H, sigmoid_memory = Z  (Step 2.2) |
 |----------|-----------|---------|-------------|
+| relu | Z | H, relu_memory | Applies relu activation on Z to calculate H. Returns H, relu_memory = Z  (Step 2.2) |
