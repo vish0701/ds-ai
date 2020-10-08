@@ -76,6 +76,7 @@ To summarise, the important points to keep in mind are:
     The backpropagation process will run in a loop from the last layer to the first, and each loop will compute the gradients for **Z,H,W,b**.
 
 The backpropagation algorithm pseudocode is as follows:
+
 ![Backpropagtion Algo](Backprop_Algo.png)
 
 
