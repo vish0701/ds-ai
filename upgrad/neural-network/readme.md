@@ -79,4 +79,13 @@ The backpropagation algorithm pseudocode is as follows:
 ![Backpropagtion Algo](Backprop_Algo.png)
 
 
+Summarization of all functions defined in backpropagation:
+| Function | Arguments | Returns | Explanation |
+|----------|-----------|---------|-------------|
+| sigmoid_backward |dH, sigmoid_memory | dZ | Z = sigmoid_memory (stored during feedforward); uses this Z and dH to calculate the gradient dZ (Step 5.1) |
+| relu_backward	| dH, relu_memory| dZ | Z = relu_memory (stored during feedforward); uses this Z and dH to calculate the gradient dZ (Step 5.1) |
+| layer_backward | dH, memory, activation| dH_prev, dW, db| Performs Steps 5.1 to 5.4. Calculates dZ using activation_backward and then uses dZ to calculate dH_prev, dW, db using equations in steps 5.2 to 5.4. |
+| L_layer_backward | HL, Y, memories | gradients | Uses **layer_backward** in a 'for loop' using relu activation to get gradients  *dH_prev, dW, db* stored in a dictionary gradients. Note that the backprop for the last laye (Steps 1 to 4) is calculated outside and before the for loop. Returns gradients which has *dH, dW, db* for all the layers. |
+
+
 
