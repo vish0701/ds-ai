@@ -1,4 +1,4 @@
-**Problem Statement**
+## Problem Statement 
 
 This assignment calls for building a complete neural network using Numpy. It implements all the steps required to build a network - *feedforward, loss computation, backpropagation, weight updates* etc.
 
@@ -14,8 +14,6 @@ The assignment is divided into the following sections:
     Backpropagation
     Parameter updates
     Model training and predictions
-
-
 
 
 **Data Preparation**
