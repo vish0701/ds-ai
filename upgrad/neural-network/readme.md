@@ -53,5 +53,10 @@ Summarization of all the functions defined in feedforward:
 | Function | Arguments | Returns | Explanation |
 |----------|-----------|---------|-------------|
 | sigmoid | Z | H, sigmoid_memory | Applies sigmoid activation on Z to calculate H. Returns H, sigmoid_memory = Z  (Step 2.2) |
-|----------|-----------|---------|-------------|
 | relu | Z | H, relu_memory | Applies relu activation on Z to calculate H. Returns H, relu_memory = Z  (Step 2.2) |
+| softmax | Z | H, softmax_memory | Applies softmax activation on Z, i.e raise to an exponent and then normalize to get H. Returns H, softmax_memory = Z (Step 2.2) |
+| initialize_parameters | dimensions | W and b for all the layers | Runs a for loop to initialize the W and b of all the layers stored as dictionary parameters |
+| layer_forward | H_prev, W, b, activation | H, memory | Performs Step 2.
+Computes Z  using step 2.1 and stores Z as linear_memory and then computes H, activation_memory  using Z as input into the activation functions defined above. Check the arguments and returns of relu, sigmoid, softmax to define this function. Returns H & memory = (linear_memory, activation_memory) |
+| L_layer_forward | X, parameters | HL, memories | Uses parameters initialized by initialize_parameters and performs feedforward using layer_forward in a 'for loop' for all layers. Appends memory for each layer to memories. layer_forward for the last layer is performed outside the loop since the activation function for all layers is relu except for the last layer (which is softmax). Returns the network output HL and memories
+(Steps 1 to 3) |
