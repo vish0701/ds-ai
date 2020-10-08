@@ -68,7 +68,7 @@ The loss used for multiclass classification is the cross-entropy loss.
 | compute_loss	| HL, Y	| loss	| It returns loss as the average of the loss of all data points. HL and Y are matrices. Hence, *loss  = 
 -1.*average of the sum of all the elements of the matrix Ylog(HL) multiplied element-wise.* |
 
-** Backpropagation **
+**Backpropagation**
 
 To summarise, the important points to keep in mind are:
     * The parameters dictionary is getting updated in place at each step.
@@ -76,3 +76,7 @@ To summarise, the important points to keep in mind are:
     The backpropagation process will run in a loop from the last layer to the first, and each loop will compute the gradients for **Z,H,W,b**.
 
 The backpropagation algorithm pseudocode is as follows:
+![Backpropagtion Algo](Backprop_Algo.png)
+
+
+
