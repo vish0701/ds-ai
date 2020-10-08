@@ -93,5 +93,17 @@ Summarization of all functions defined in **backpropagation**:
 ![](assignment_flow.png)
 
 
+### Parameter Updates
+| Function | Arguments | Returns | Explanation |
+|----------|-----------|---------|-------------|
+| update_parameters	| parameters, gradients, learning_rate	| parameters *parameters* has the parameters which is updated using the *learning_rate* and the gradients stored in *gradients*. |
+
+### Model Training
+This is the final step in which all the functions created above are combined to define an 'L_layer_model'. 
+| Function | Arguments | Returns | Explanation |
+|----------|-----------|---------|-------------|
+| L_layer_model	| X, Y, dimensions, learning_rate , num_iterations, print_loss | parameters	| Initializes parameters with **initialize_parameters**. In a for loop uses functions **L_layer_forward, compute_loss, L_layer_backward, update_parameters** in the specified order.|
 
 
+**Important Note on Training**
+The training will take about 10-20 minutes with about 2000 iterations, which is a recommended number to achieve good accuracy (> 75%).
