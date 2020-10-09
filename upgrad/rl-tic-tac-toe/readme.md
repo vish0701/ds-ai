@@ -25,7 +25,7 @@ The other popular variant of this game is Numerical Tic-Tac-Toe. Instead of X’
 
 In this assignment, you need to build an RL agent that learns to play Numerical Tic-Tac-Toe with odd numbers (the agent will always make the first move). You need to train your agent using Q-Learning. The environment is playing randomly with the agent, i.e. its strategy is to put an even number randomly in an empty cell. If your agent wins the game, it gets 10 points, if the environment wins, the agent loses 10 points. And if the game ends in a draw, it gets 0. Also, you want the agent to win in as few moves as possible, so for each move, it gets a -1 point.
 
-Following is a sample episode for your reference: 
+Following is a [sample episode](sample_episode.png): 
 [](sample_episode.png) 
 
 
