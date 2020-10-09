@@ -1,4 +1,4 @@
-#h3 Problem Statement
+### Problem Statement
 
 One of the most popular and enduring games of all time is Tic-Tac-Toe. Because of its familiarity, this game is often used as a starting example to mathematically analyze a decision-making process. Its brevity makes it a perfect game to illustrate the rewards of thinking ahead and learning the consequence of each decision.
 
@@ -7,7 +7,7 @@ There are many variants of Tic-Tac-Toe. The most classic one is of X’s and O�
 The other popular variant of this game is Numerical Tic-Tac-Toe. Instead of X’s and O’s, the numbers 1 to 9 are used. In the 3x3 grid, numbers 1 to 9 are filled, with one number in each cell. The first player plays with the odd numbers, the second player plays with the even numbers, i.e. player 1 can enter only an odd number in the cell while player 2 can enter an even number in one of the remaining cells. Each number can be used exactly once in the entire grid. The player who puts down 15 points in a line - (column, row or a diagonal) wins the game. 
 
  
-#h3 Rules of the Game:
+### Rules of the Game:
 
 1. The game will be played on a 3x3 grid (9 cells) using numbers from 1 to 9. Each number can be used exactly once in the entire grid.
 
@@ -31,10 +31,9 @@ Following is a sample episode for your reference:
 
 In this episode, the environment wins as it is able to make 15 first (8+6+1). After the agent places 1 in one of the grids, the environment rewards it (with a negative reward of -1) and makes a next move of placing 8 in one of the remaining cells.
 
-#h3 Goals
+### Goals
 
 You are given two files: ‘TCGame_Env.py’ and ‘TicTacToe_Agent.ipynb’. The first one is the environment file and the second one is the agent file. You use the environment that is created in TCGame_Env.py to write the learning algorithm.
-
 
 You need to accomplish following in this assignment:
 
