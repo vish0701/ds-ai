@@ -27,7 +27,7 @@ In this project, you need to create the environment and an RL agent that learns 
 !["DQN Architecture 1"](dqn_arch1.png)
 
 
-**DQN Architecture 2**
+<div align="center"><b>DQN Architecture 2</b></div>
 ![DQN Architecture 2](dqn_arch2.png)
 
 It’s up to you to choose the Q-network architecture. We have provided you with the logic files for both the network architectures (containing some skeleton code). It has four files:
