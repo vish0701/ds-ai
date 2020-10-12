@@ -31,12 +31,7 @@ In this project, you need to create the environment and an RL agent that learns 
 
 !["DQN Architecture 2"](dqn_arch2.png)
 
-It’s up to you to choose the Q-network architecture. We have provided you with the logic files for both the network architectures (containing some skeleton code). It has four files:
-
-    Environment file - Env.py
-    Agent Architecture 1 - Agent_Architecture1.ipynb
-    Agent Architecture 2 - Agent_Architecture2.ipynb
-    Time-Matrix - TM.npy
+This solution uses Architecture 1.
 
 
 ### Goals
@@ -52,10 +47,7 @@ It’s up to you to choose the Q-network architecture. We have provided you with
 3. Convergence- You need to converge your results. The Q-values may be suboptimal since the agent won't be able to explore much in 5-6 hours of simulation. But it is important that your Q-values converge. There are two ways to check the convergence of the DQN model:
 
     * Sample a few state-action pairs and plot their Q-values along episodes
-
     * Check whether the total rewards earned per episode are showing stability
-
-    Showing one of these convergence plots will suffice.
 
  
 ** Important points to consider while training: **
