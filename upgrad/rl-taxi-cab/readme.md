@@ -22,7 +22,10 @@ You can see the [MDP](MDP.pdf) file in which simplifying assumptions mentioned i
 
 In this project, you need to create the environment and an RL agent that learns to choose the best request. You need to train your agent using vanilla Deep Q-learning (DQN) only and NOT a double DQN using one of the two architectures of DQN (shown below) -
 !["DQN Architecture 1"](dqn_arch1.png)
+*DQN Architecture 1*
+
 ![DQN Architecture 2](dqn_arch2.png)
+*DQN Architecture 2*
 
 It’s up to you to choose the Q-network architecture. We have provided you with the logic files for both the network architectures (containing some skeleton code). It has four files:
 
