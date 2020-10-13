@@ -27,9 +27,9 @@ gibbs is repeated k-times in the function *cd_k()* to perform Contrastive Diverg
 
 To maximize the joint probability distribution, using the energy function as defined in the above sampling process, the update matrices and vectors simplify as follows:
 
-ΔW=v0⊗p(h<sub>0</sub>|v<sub>0</sub>)−v<sub>k</sub>⊗p(h<sub>k</sub>|v<sub>k</sub>)
-Δb=avg_across_batch(v<sub>o</sub>−v<sub>k</sub>)
-Δc=avg_across_batch(p(h<sub>0</sub>|v<sub>o</sub>)−p(h<sub>k</sub>|v<sub>k</sub>))
+1. ΔW=v0⊗p(h<sub>0</sub>|v<sub>0</sub>)−v<sub>k</sub>⊗p(h<sub>k</sub>|v<sub>k</sub>)
+2. Δb=avg_across_batch(v<sub>o</sub>−v<sub>k</sub>)
+3. Δc=avg_across_batch(p(h<sub>0</sub>|v<sub>o</sub>)−p(h<sub>k</sub>|v<sub>k</sub>))
 
 You do average across batch because you need a vector update for the bias vectors and v<sub>o</sub>,<sub>k</sub> and p(h<sub>0</sub>|v<sub>o</sub>),p(h<sub>k</sub>|v<sub>k</sub>) are matrices.
 
