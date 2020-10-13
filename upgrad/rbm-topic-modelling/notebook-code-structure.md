@@ -11,7 +11,7 @@ Please note that the above shape might vary with the way you perform bag of word
 
 1. You start with the input batch of data, v<sub>0</sub>. 
 2. You then calculate <br>
-<img src="CD-phv0-calc.png" width="250" height="250"/>
+<img src="CD-phv0-calc.png" width="50%" height="50%"/>
 Vectorized implementation: 
 p(h|v0)=σ(C + V.W)
 3. Using this p(h|v0), you sample h0.
