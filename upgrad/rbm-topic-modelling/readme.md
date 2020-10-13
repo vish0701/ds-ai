@@ -28,3 +28,5 @@ After getting the topics, you can do a lot of things like:
 You can use different models to perform topic modelling, one of which is LDA  which you have studied earlier in the Natural Language Processing course.
 
 In this assignment, we will use a Restricted Boltzmann Machine (RBM) to perform topic modelling. The input to an RBM is a bag of words model and the output is the distribution of words in the topics.
+
+[Dataset](amazon.csv) used for this assignment.
