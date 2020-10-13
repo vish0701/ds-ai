@@ -6,5 +6,5 @@ In this assignment, we shall create a function to perform Gibbs sampling k times
     Please note that the above shape might vary with the way you perform bag of words model but the index data_size will be the same.
     Training using CD-k
     This involves performing Gibbs sampling k-times which can be better understood using the following image.
-    
-    ![](Contrastive-Divergence.png)
+
+![](Contrastive-Divergence.png)
