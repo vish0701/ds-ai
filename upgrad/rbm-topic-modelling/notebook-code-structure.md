@@ -27,36 +27,29 @@ gibbs is repeated k-times in the function *cd_k()* to perform Contrastive Diverg
 
 To maximize the joint probability distribution, using the energy function as defined in the above sampling process, the update matrices and vectors simplify as follows:
 
-    ΔW=v0⊗p(h<sub>0</sub>|v<sub>0</sub>)−v<sub>k</sub>⊗p(h<sub>k</sub>|v<sub>k</sub>)
-    Δb=avg_across_batch(vo−vk)
-    Δc=avg_across_batch(p(h0|vo)−p(hk|vk))
+ΔW=v0⊗p(h<sub>0</sub>|v<sub>0</sub>)−v<sub>k</sub>⊗p(h<sub>k</sub>|v<sub>k</sub>)
+Δb=avg_across_batch(v<sub>o</sub>−v<sub>k</sub>)
+Δc=avg_across_batch(p(h<sub>0</sub>|v<sub>o</sub>)−p(h<sub>k</sub>|v<sub>k</sub>))
 
-You do average across batch because you need a vector update for the bias vectors and vo,vk and p(h0|vo),p(hk|vk) are matrices.
+You do average across batch because you need a vector update for the bias vectors and v<sub>o</sub>,<sub>k</sub> and p(h<sub>0</sub>|v<sub>o</sub>),p(h<sub>k</sub>|v<sub>k</sub>) are matrices.
 
- 
-
-Note that the exact derivations are not covered as it is very complex and the Prof. has given the intuition about the training process in the previous segments.
-
- 
-
-Since you have to maximize the joint probability distribution, you use gradient ascent here with momentum. It is recommended that you understand the working of momentum from here.
-
- 
+Since we have to maximize the joint probability distribution, we use gradient ascent here with momentum.
 
 The momentum equations are as follows:
 
-    mWt=γ mWt−1−ΔW
-    mbt=γ mbt−1−Δb
-    mct=γ mct−1−Δc
+1. mW<sub>t</sub>=γ mW<sub>t−1</sub> − ΔW
+2. mb<sub>t</sub>=γ mb<sub>t−1</sub> − Δb
+3. mc<sub>t</sub>=γ mc<sub>t−1</sub> − Δc
 
 γ is the momentum coefficient here.
 
 Using these momentum terms, you update the weights and biases as follows:
 
-    Wt=Wt−1+α mWt
-    bt=bt−1+α mbt
-    ct=ct−1+α mct
+1. W<sub>t</sub> = W<sub>t−1</sub> + α mW<sub>t</sub>
+2. b<sub>t</sub> = b<sub>t−1</sub> + α mb<sub>t</sub>
+3. c<sub>t</sub> = c<sub>t−1</sub> + α mc<sub>t</sub>
 
 α is the learning rate.
 
-The above equations are implemented in the function train().
+The above equations are implemented in the function *train()*.
+
