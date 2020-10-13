@@ -12,8 +12,9 @@ Please note that the above shape might vary with the way you perform bag of word
 1. You start with the input batch of data, v<sub>0</sub>. 
 2. You then calculate <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<img src="CD-phv0-calc.png" width="247" height="36"><br> Vectorized implementation: <br> 
-> p(h|v0)=σ(C + V.W)
-3. Using this p(h|v0), you sample h0.
-4. Now that you have got h0, you calculate p(v|h0)=σ(bj+∑mj=1hjwij) as seen in the lecture.
-Vectorized implementation: p(v|h0)=σ(B+H.WT)
-5. Using this p(v|h0), you sample v1.
+> p(h|v<sub>0</sub>)=σ(C + V.W)
+3. Using this p(h|v<sub>0</sub>), you sample h<sub>0</sub>.
+4. Now that you have got h<sub>0</sub>, you calculate
+&nbsp;&nbsp;&nbsp;&nbsp;<img src="CD-phv0-calc-2.png" width="247" height="36"><br> Vectorized implementation: <br>  Vectorized implementation: <br>
+> p(v|h<sub>0</sub>)=σ(B+H.WT)
+5. Using this p(v|h<sub>0</sub>), you sample v<sub>1</sub>.
